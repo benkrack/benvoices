@@ -1,21 +1,59 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Routes from './routes';
+import React from "react";
+import { render } from "react-dom";
+import { makeData, Logo, Tips } from "./Utils";
 
-import './index.css';
+// Import React Table
+import ReactTable from "react-table";
+import "react-table/react-table.css";
 
-import { Provider } from 'react-redux';
-import { applyMiddleware, createStore } from 'redux';
-import { createLogger } from 'redux-logger';
-import thunk from 'redux-thunk';
-import rootReducer from './reducers';
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: makeData()
+    };
+  }
+  render() {
+    const { data } = this.state;
+    return (
+      <div>
+        <ReactTable
+          data={data}
+          columns={[
+            {
+              columns: [
+                {
+                  Header: "Campaign Id",
+                  accessor: "campaign_id"
+                },
+                {
+                  Header: "Campaign Name",
+                  accessor: "campaign_name"
+                },
+                {
+                  Header: "Line Item Name",
+                  accessor: "line_item_name"
+                },
+                {
+                  Header: "Actual Amount",
+                  accessor: "actual_amount"
+                },
+                {
+                  Header: "Adjustments",
+                  accessor: "adjustments"
+                }
+              ]
+            }
+          ]}
+          defaultPageSize={10}
+          className="-striped -highlight"
+        />
+        <br />
+        <Tips />
+        <Logo />
+      </div>
+    );
+  }
+}
 
-const middleware = applyMiddleware(thunk, createLogger());
-export const store = createStore(rootReducer, middleware);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Routes />
-  </Provider>,
-  document.getElementById('root')
-);
+render(<App />, document.getElementById("root"));

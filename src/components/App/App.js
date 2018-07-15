@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
+import ReactTable from "react-table";
+var ReactTable = require("react-table").default;
 import logo from './logo.svg';
 import './style.css';
+import 'react-table/react-table.css';
+
 
 class App extends Component {
 
