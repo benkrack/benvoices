@@ -6,15 +6,15 @@ Benvoices web app for constructing a table from line items
 
 1. Clone the repository
 
-git clone https://github.com/benkrack/benvoices.git
+**git clone https://github.com/benkrack/benvoices.git**
 
 2. Install dependencies
 
-npm install
+**npm install**
 
 3. Run the application
 
-npm run start
+**npm run start**
 
 ## Results
 
@@ -26,4 +26,4 @@ Bucket one:
 
 ### License
 
-React is [MIT licensed](./LICENSE).
+Benvoices is [MIT licensed](./LICENSE).
