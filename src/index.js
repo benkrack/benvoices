@@ -45,7 +45,7 @@ class App extends React.Component {
               ]
             }
           ]}
-          defaultPageSize={10}
+          defaultPageSize={23}
           className="-striped -highlight"
         />
         <br />
