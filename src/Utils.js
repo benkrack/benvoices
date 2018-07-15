@@ -10,26 +10,6 @@ const range = len => {
   return arr;
 };
 
-const newPerson = () => {
-  return {
-    campaign_id: namor.generate({ words: 1, numbers: 0 }),
-    campaign_name: namor.generate({ words: 1, numbers: 0 }),
-    line_item_name: Math.floor(Math.random() * 30),
-    booked_amount: Math.floor(Math.random() * 100),
-    actual_amount: Math.floor(Math.random() * 100),
-    adjustments: Math.floor(Math.random(400)),
-  };
-};
-
-export function makeData2(len = 5553) {
-  return range(len).map(d => {
-    return {
-      ...newPerson(),
-      children: range(10).map(newPerson)
-    };
-  });
-}
-
 export function makeData() {
   return tableData;
 }
