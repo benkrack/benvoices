@@ -1,6 +1,6 @@
 # [Benvoices](https://github.com/benkrack/benvoices) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE)
 
-Benvoices web app for constructing a table from line items
+Benvoices is a react app that displays a paginated and sortable table of line items
 
 ## Installation
 
@@ -10,7 +10,11 @@ Benvoices web app for constructing a table from line items
 
 2. Install dependencies
 
+Make sure you have node.js/npm installed
+
 **npm install**
+
+**npm install react-table**
 
 3. Run the application
 

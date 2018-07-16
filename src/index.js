@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { makeData, Logo, Tips } from "./Utils";
+import { makeData, Tips } from "./Utils";
 
 // Import React Table
 import ReactTable from "react-table";
@@ -50,7 +50,6 @@ class App extends React.Component {
         />
         <br />
         <Tips />
-        <Logo />
       </div>
     );
   }
